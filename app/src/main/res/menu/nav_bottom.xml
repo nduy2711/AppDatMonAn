@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_chicken"
+        android:title="Gà rán" />
+
+    <item
+        android:id="@+id/item_tokkbokki"
+        android:title="Tokbokki" />
+
+    <item
+        android:id="@+id/item_snacks"
+        android:title="Đồ ăn vặt" />
+
+    <item
+        android:id="@+id/item_drinks"
+        android:title="Đồ uống" />
+</menu>

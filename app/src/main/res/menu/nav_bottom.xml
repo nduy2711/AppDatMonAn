@@ -2,18 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/item_chicken"
+        android:id="@+id/item_meat"
+        android:icon="@drawable/meat"
         android:title="Gà rán" />
 
     <item
-        android:id="@+id/item_tokkbokki"
+        android:id="@+id/item_tokkboki"
+        android:icon="@drawable/tokbokki"
         android:title="Tokbokki" />
 
     <item
-        android:id="@+id/item_snacks"
+        android:id="@+id/item_hotpot"
+        android:icon="@drawable/hotpot"
         android:title="Đồ ăn vặt" />
 
     <item
-        android:id="@+id/item_drinks"
-        android:title="Đồ uống" />
+        android:id="@+id/item_snack"
+        android:icon="@drawable/snack"
+        android:title="Đồ ăn vặt" />
 </menu>

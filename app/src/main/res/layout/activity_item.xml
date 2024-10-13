@@ -31,16 +31,20 @@
             android:layout_weight="1"
             >
 
-            <GridView
-                android:id="@+id/table_gridView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:numColumns="3"
-                android:verticalSpacing="10dp"
-                android:horizontalSpacing="10dp"
-                android:gravity="center"
-                />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
         </FrameLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bt_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:menu="@menu/nav_bottom"
+            />
 
     </LinearLayout>
 
@@ -52,4 +56,5 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_menu" />
-    </androidx.drawerlayout.widget.DrawerLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

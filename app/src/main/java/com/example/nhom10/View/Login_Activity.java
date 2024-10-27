@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -52,6 +53,7 @@ public class Login_Activity extends AppCompatActivity {
         loginHandler = new LoginHandler(this, DB_NAME, null, DB_VERSION);
         loginHandler.onCreate(sqLiteDatabase);
         loginHandler.initData();
+
         addEvents();
 
     }
@@ -69,10 +71,11 @@ public class Login_Activity extends AppCompatActivity {
                 String username = edtUsername.getText().toString();
                 String password = edtPassword.getText().toString();
                 if (loginHandler.checkLogin(username, password)) {
+                    Toast.makeText(Login_Activity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(Login_Activity.this, Main_Activity.class));
                     startActivity(getIntent());
                 } else {
-                    // Xử lý trường hợp đăng nhập không thành công
+                    Toast.makeText(Login_Activity.this, "Tên tài khoản hoac mật khẩu không đúng", Toast.LENGTH_SHORT).show();
                 }
             }
         });

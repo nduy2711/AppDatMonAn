@@ -4,7 +4,7 @@
     <item
         android:id="@+id/item_meat"
         android:icon="@drawable/meat"
-        android:title="Gà rán" />
+        android:title="Thịt nướng" />
 
     <item
         android:id="@+id/item_tokkboki"
@@ -14,7 +14,7 @@
     <item
         android:id="@+id/item_hotpot"
         android:icon="@drawable/hotpot"
-        android:title="Đồ ăn vặt" />
+        android:title="Lẩu" />
 
     <item
         android:id="@+id/item_snack"

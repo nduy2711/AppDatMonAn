@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
+
+        <GridView
+            android:id="@+id/meat_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="2"
+            android:verticalSpacing="10dp"
+            android:horizontalSpacing="10dp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:stretchMode="columnWidth" />
+    </FrameLayout>
+
+    <!-- ListView to show selected items -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ListView
+            android:id="@+id/item_listView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#D9D9D9"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp" >
+
+        </ListView>
+
+        <!-- Bill and Confirm section -->
+        <ImageView
+            android:id="@+id/img_addDishButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:layout_gravity="right"
+            app:srcCompat="@drawable/plus" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#D3D3D3"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tổng cộng: 0 VND"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/confirm_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xác Nhận"
+                android:textColor="@android:color/white"
+                android:background="@android:color/holo_red_dark" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

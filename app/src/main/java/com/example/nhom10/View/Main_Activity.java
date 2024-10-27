@@ -1,6 +1,7 @@
 package com.example.nhom10.View;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -16,17 +17,36 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.example.nhom10.Control.TableGridAdapter;
 import com.example.nhom10.R;
 import com.google.android.material.navigation.NavigationView;
 
 public class Main_Activity extends AppCompatActivity {
+
+    private static final String DB_NAME = "qlbh";
+    private static final int DB_VERSION = 1;
+
+    // Table names
+    private static final String CATEGORY_TABLE = "Category";
+    private static final String MENUITEM_TABLE = "MenuItem";
+
+    // Columns for Category table
+    private static final String CATEGORY_ID = "CategoryID";
+    private static final String CATEGORY_NAME = "CategoryName";
+
+    // Columns for MenuItem table
+    private static final String MENUITEM_ID = "MenuItemID";
+    private static final String MENUITEM_NAME = "ItemName";
+    private static final String MENUITEM_PRICE = "Price";
+    private static final String MENUITEM_CATEGORY_ID = "CategoryID"; // Foreign key
+
 
     DrawerLayout drawerLayout;
     Toolbar toolbar;
     NavigationView navigationView;
     FrameLayout frameLayout;
     GridView tableGridView;
+
+    SQLiteDatabase sqLiteDatabase;
 
     int [] images = {R.drawable.table1, R.drawable.table2, R.drawable.table3, R.drawable.table4, R.drawable.table5, R.drawable.table6,
             R.drawable.table7, R.drawable.table8, R.drawable.table9, R.drawable.table10, R.drawable.table11, R.drawable.table12,

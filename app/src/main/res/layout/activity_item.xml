@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="5dp"
             android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme" />
@@ -31,11 +31,6 @@
             android:layout_weight="1"
             >
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
         </FrameLayout>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -44,6 +39,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             app:menu="@menu/nav_bottom"
+            android:layout_alignParentBottom="true"
+            app:itemTextColor="@color/color_navigation"
+            app:itemIconTint="@color/color_navigation"
             />
 
     </LinearLayout>

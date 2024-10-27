@@ -1,4 +1,4 @@
-package com.example.nhom10.Control;
+package com.example.nhom10.View;
 
 import android.content.Context;
 import android.view.LayoutInflater;
